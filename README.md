@@ -2,7 +2,7 @@
 DeepL shell translator. It works!
 
 ### References
-Based on method used in Alfred Deepl Plugin. Its code has more bloat, uses own libs instead repo one and don't work correctly from time to time. Method is pretty simple, it's just curling of deepl json shit.
+Based on method used in Alfred Deepl Plugin. That code has more mac bloat, uses own libs instead repo one and don't work correctly from time to time. Method is pretty simple, it's just curling of deepl json shit.
 
 ### Dependencies:
 `jq`
