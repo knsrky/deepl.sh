@@ -61,7 +61,7 @@ if [[ $result == *'"error":{"code":'* ]]; then
   message=$(echo "$result" | "$PARSER" -r '.["error"]|.message')
   echo "Error: $message"
 else
-  echo "$result" | "$PARSER" -r '{items: [.result.translations[0].beams[] | {arg:.postprocessed_sentence}]}' | head -n4 | tail -n1 | cut -c 15- | head --bytes -2
   echo ""
+  echo "$result" | "$PARSER" -r '{items: [.result.translations[0].beams[] | {arg:.postprocessed_sentence}]}' | grep -E "arg" | grep -o '".*"' | sed 's/"//g' | sed 's/arg: //g' | sed '0~1 a\\'
 fi
 ##############################################################################
